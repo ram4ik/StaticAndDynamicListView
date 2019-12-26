@@ -10,7 +10,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+//        List(0..<10) { value in
+//            VStack(alignment: .leading) {
+//                Text("Hello, \(value) World!")
+//                Image(systemName: "heart.fill")
+//            }
+//        }
+        
+        List {
+            Text("Hello, World!")
+                .font(.subheadline)
+            Text("Hello, second World!")
+            ForEach(0..<10) { value in
+                Text("World - \(value)")
+            }
+            VStack(alignment: .leading) {
+                Text("Hello, third World!")
+                    .font(.largeTitle)
+                Text("The End")
+            }
+        }
     }
 }
 
